@@ -27,13 +27,13 @@ const Navbar = () => {
 
         <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/'>Home</Link>
         <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/movies'>Movies</Link>
-        <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/'>Theaters</Link>
-        <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/'>Releases</Link>
+        {/* <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/'>Theaters</Link>
+        <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/'>Releases</Link> */}
        {favoriteMovies.length > 0 && <Link onClick={()=> {scrollTo(0,0); setIsOpen(false)}} to='/favorite'>Favorites</Link>}
       </div>
 
     <div className='flex items-center gap-8'>
-        <SearchIcon className='max-md:hidden w-6 h-6 cursor-pointer'/>
+{/*         <SearchIcon className='max-md:hidden w-6 h-6 cursor-pointer'/> */}
         {
             !user ? (
                 <button onClick={openSignIn} className='px-4 py-1 sm:px-7 sm:py-2 bg-primary hover:bg-primary-dull transition rounded-full font-medium cursor-pointer'>Login</button>
@@ -55,3 +55,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
